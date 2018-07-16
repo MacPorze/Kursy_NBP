@@ -1,0 +1,1 @@
+name = "Kursy_NBP"

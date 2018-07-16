@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kursy NBP</title>
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <style>
+        body {
+            width: 1200px;
+        }
+    </style>
+</head>
+<body class="mx-auto">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h1>Kursy NBP</h1>
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="btn btn-outline-primary mt-2" onclick="update()">Pobierz aktualne kursy walut</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="main">
+        <div class="container">
+            Tabela A
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Waluta</th>
+                        <th>Symbol</th>
+                        <th>Kurs</th>
+                        <th>Data ustalenia kursu</th>
+                    </tr>
+                </thead>
+                <tbody id="tableA">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            Tabela B
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Waluta</th>
+                        <th>Symbol</th>
+                        <th>Kurs</th>
+                        <th>Data ustalenia kursu</th>
+                    </tr>
+                </thead>
+                <tbody id="tableB">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <h6>Autor: Maciej Porzeżyński</h6>
+    </footer>
+
+    <script src="${request.static_url('static/data.js')}"></script>
+</body>
+</html>
